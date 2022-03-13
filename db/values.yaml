@@ -1,0 +1,14 @@
+auth:
+  postgresPassword: django-app-password123
+  database: django
+  username: django
+  password: django
+primary:
+  initdb:
+    scripts: 
+      init.sql: | 
+        CREATE TABLE table1 (id integer NOT NULL, first_name character varying(10) NOT NULL, last_name character varying(10) NOT NULL); 
+        INSERT INTO contacts (id, last_name, first_name) VALUES (1, 'Anderson', 'Peter'); 
+        INSERT INTO contacts (id, last_name, first_name) VALUES (2, 'Shaw', 'Kate'); 
+        INSERT INTO contacts (id, last_name, first_name) VALUES (3, 'Cuteleigh', 'John'); 
+        COMMIT;

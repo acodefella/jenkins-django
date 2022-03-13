@@ -1,0 +1,10 @@
+jenkinsUser: admin
+jenkinsPassword: password ## TODO: use Sealed secret instead of plain secret
+jenkinsHost: jenkins.local
+service:
+  type: ClusterIP
+ingress:
+  enabled: true
+  pathType: Prefix
+  hostname: jenkins.local
+  path: /
